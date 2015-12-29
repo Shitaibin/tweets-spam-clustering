@@ -1,3 +1,7 @@
+# Custom
+data/processed_20110607_spam_training.txt
+test/test_result/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

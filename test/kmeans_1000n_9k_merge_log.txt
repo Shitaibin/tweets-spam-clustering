@@ -1,0 +1,318 @@
+k =  8
+Before merge
+tags of each cluster:
+label 0: [('icloud', 208), ('wwdc', 54), ('dash', 52)]
+label 1: [('clothing', 32), ('vintage', 32), ('buy', 16)]
+label 2: [('icloud', 32), ('gaga', 24), ('lady', 24)]
+label 3: [('clothing', 184), ('vintage', 184), ('buy', 99)]
+label 4: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 5: [('icloud', 254), ('gaga', 249), ('lady', 249)]
+label 6: [('clothing', 291), ('vintage', 291), ('buy', 212)]
+label 7: [('icloud', 55), ('gaga', 53), ('lady', 53)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+3 -> 1
+4 -> 4
+5 -> 0
+6 -> 1
+7 -> 0
+tags of each cluster:
+label 0: [('icloud', 208), ('wwdc', 54), ('dash', 52)]
+label 1: [('clothing', 32), ('vintage', 32), ('buy', 16)]
+label 2: [('icloud', 32), ('gaga', 24), ('lady', 24)]
+label 3: [('clothing', 184), ('vintage', 184), ('buy', 99)]
+label 4: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 5: [('icloud', 254), ('gaga', 249), ('lady', 249)]
+label 6: [('clothing', 291), ('vintage', 291), ('buy', 212)]
+label 7: [('icloud', 55), ('gaga', 53), ('lady', 53)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+3 -> 1
+4 -> 4
+5 -> 0
+6 -> 1
+7 -> 0
+
+After merge
+tags of each cluster:
+label 0: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 1: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 4: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+
+merge rules:
+0 -> 0
+1 -> 1
+4 -> 4
+--------------------------------------
+k =  3
+Before merge
+tags of each cluster:
+label 0: [('icloud', 333), ('gaga', 326), ('lady', 326)]
+label 1: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 2: [('icloud', 216), ('bevacqua', 69), ('jonas', 69)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+tags of each cluster:
+label 0: [('icloud', 333), ('gaga', 326), ('lady', 326)]
+label 1: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 2: [('icloud', 216), ('bevacqua', 69), ('jonas', 69)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+
+After merge
+tags of each cluster:
+label 0: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 1: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+
+merge rules:
+0 -> 0
+1 -> 1
+--------------------------------------
+k =  2
+Before merge
+tags of each cluster:
+label 0: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 1: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+
+merge rules:
+0 -> 0
+1 -> 1
+There is no need to merge.
+k =  4
+Before merge
+tags of each cluster:
+label 0: [('clothing', 216), ('vintage', 216), ('buy', 115)]
+label 1: [('icloud', 216), ('bevacqua', 69), ('jonas', 69)]
+label 2: [('icloud', 333), ('gaga', 326), ('lady', 326)]
+label 3: [('clothing', 291), ('vintage', 291), ('buy', 212)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 1
+3 -> 0
+tags of each cluster:
+label 0: [('clothing', 216), ('vintage', 216), ('buy', 115)]
+label 1: [('icloud', 216), ('bevacqua', 69), ('jonas', 69)]
+label 2: [('icloud', 333), ('gaga', 326), ('lady', 326)]
+label 3: [('clothing', 291), ('vintage', 291), ('buy', 212)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 1
+3 -> 0
+
+After merge
+tags of each cluster:
+label 0: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 1: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+
+merge rules:
+0 -> 0
+1 -> 1
+--------------------------------------
+k =  9
+Before merge
+tags of each cluster:
+label 0: [('icloud', 53), ('jean', 24), ('martyn', 24)]
+label 1: [('blackwood', 11), ('richard', 11), ('song', 9)]
+label 2: [('icloud', 160), ('wwdc', 54), ('question', 48)]
+label 3: [('icloud', 83), ('gaga', 82), ('lady', 82)]
+label 4: [('crazy', 20), ('pain', 20), ('release', 20)]
+label 5: [('clothing', 490), ('vintage', 490), ('buy', 310)]
+label 6: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 7: [('icloud', 56), ('gaga', 54), ('lady', 54)]
+label 8: [('icloud', 194), ('gaga', 190), ('lady', 190)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+3 -> 0
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 0
+8 -> 0
+tags of each cluster:
+label 0: [('icloud', 53), ('jean', 24), ('martyn', 24)]
+label 1: [('blackwood', 11), ('richard', 11), ('song', 9)]
+label 2: [('icloud', 160), ('wwdc', 54), ('question', 48)]
+label 3: [('icloud', 83), ('gaga', 82), ('lady', 82)]
+label 4: [('crazy', 20), ('pain', 20), ('release', 20)]
+label 5: [('clothing', 490), ('vintage', 490), ('buy', 310)]
+label 6: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 7: [('icloud', 56), ('gaga', 54), ('lady', 54)]
+label 8: [('icloud', 194), ('gaga', 190), ('lady', 190)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 0
+3 -> 0
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 0
+8 -> 0
+
+After merge
+tags of each cluster:
+label 0: [('icloud', 546), ('gaga', 326), ('lady', 326)]
+label 1: [('blackwood', 11), ('richard', 11), ('song', 9)]
+label 4: [('crazy', 20), ('pain', 20), ('release', 20)]
+label 5: [('clothing', 490), ('vintage', 490), ('buy', 310)]
+label 6: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+
+merge rules:
+0 -> 0
+1 -> 1
+4 -> 4
+5 -> 5
+6 -> 6
+--------------------------------------
+k =  7
+Before merge
+tags of each cluster:
+label 0: [('clothing', 129), ('vintage', 129), ('buy', 122)]
+label 1: [('icloud', 237), ('gaga', 233), ('lady', 233)]
+label 2: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 3: [('icloud', 96), ('gaga', 93), ('lady', 93)]
+label 4: [('mandownvideo', 26), ('rihanna', 25), ('jean', 24)]
+label 5: [('icloud', 216), ('wwdc', 54), ('dash', 53)]
+label 6: [('clothing', 378), ('vintage', 378), ('buy', 205)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 1
+4 -> 4
+5 -> 1
+6 -> 0
+tags of each cluster:
+label 0: [('clothing', 129), ('vintage', 129), ('buy', 122)]
+label 1: [('icloud', 237), ('gaga', 233), ('lady', 233)]
+label 2: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 3: [('icloud', 96), ('gaga', 93), ('lady', 93)]
+label 4: [('mandownvideo', 26), ('rihanna', 25), ('jean', 24)]
+label 5: [('icloud', 216), ('wwdc', 54), ('dash', 53)]
+label 6: [('clothing', 378), ('vintage', 378), ('buy', 205)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 1
+4 -> 4
+5 -> 1
+6 -> 0
+
+After merge
+tags of each cluster:
+label 0: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 1: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 2: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 4: [('mandownvideo', 26), ('rihanna', 25), ('jean', 24)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+4 -> 4
+--------------------------------------
+k =  6
+Before merge
+tags of each cluster:
+label 0: [('icloud', 195), ('bevacqua', 67), ('jonas', 67)]
+label 1: [('icloud', 230), ('gaga', 226), ('lady', 226)]
+label 2: [('icloud', 33), ('house', 32), ('party', 32)]
+label 3: [('clothing', 277), ('vintage', 277), ('buy', 205)]
+label 4: [('icloud', 91), ('gaga', 88), ('lady', 88)]
+label 5: [('clothing', 230), ('vintage', 230), ('buy', 122)]
+
+merge rules:
+0 -> 0
+1 -> 0
+2 -> 0
+3 -> 3
+4 -> 0
+5 -> 3
+tags of each cluster:
+label 0: [('icloud', 195), ('bevacqua', 67), ('jonas', 67)]
+label 1: [('icloud', 230), ('gaga', 226), ('lady', 226)]
+label 2: [('icloud', 33), ('house', 32), ('party', 32)]
+label 3: [('clothing', 277), ('vintage', 277), ('buy', 205)]
+label 4: [('icloud', 91), ('gaga', 88), ('lady', 88)]
+label 5: [('clothing', 230), ('vintage', 230), ('buy', 122)]
+
+merge rules:
+0 -> 0
+1 -> 0
+2 -> 0
+3 -> 3
+4 -> 0
+5 -> 3
+
+After merge
+tags of each cluster:
+label 0: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 3: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+
+merge rules:
+0 -> 0
+3 -> 3
+--------------------------------------
+k =  5
+Before merge
+tags of each cluster:
+label 0: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 1: [('icloud', 54), ('gaga', 52), ('lady', 52)]
+label 2: [('icloud', 279), ('gaga', 274), ('lady', 274)]
+label 3: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 4: [('icloud', 216), ('wwdc', 54), ('dash', 53)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 1
+3 -> 3
+4 -> 1
+tags of each cluster:
+label 0: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 1: [('icloud', 54), ('gaga', 52), ('lady', 52)]
+label 2: [('icloud', 279), ('gaga', 274), ('lady', 274)]
+label 3: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+label 4: [('icloud', 216), ('wwdc', 54), ('dash', 53)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 1
+3 -> 3
+4 -> 1
+
+After merge
+tags of each cluster:
+label 0: [('clothing', 507), ('vintage', 507), ('buy', 327)]
+label 1: [('icloud', 549), ('gaga', 326), ('lady', 326)]
+label 3: [('bevacqua', 69), ('jonas', 69), ('rip', 51)]
+
+merge rules:
+0 -> 0
+1 -> 1
+3 -> 3
+--------------------------------------
