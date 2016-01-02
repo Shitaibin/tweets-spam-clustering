@@ -4,6 +4,8 @@
 from __future__ import print_function
 
 import sys
+sys.path.append("../tools")
+
 from tools import merge_cluster_result, analyze_result
 
 import os
@@ -18,11 +20,12 @@ for f in files:
         idx = f.index('k', sta)
         k = f[sta: idx]
         fp = "test_result/" + f
+        nfp = fp[:-4] + "_merge.csv"
 
         print("k = ", k)
         print("Before merge")
         analyze_result(fp)
-        
+
         if merge_cluster_result(fp):
             # show analyzing info
             analyze_result(fp)

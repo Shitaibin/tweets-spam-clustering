@@ -8,7 +8,7 @@ from __future__ import print_function
 import sys
 sys.path.append("../tools/")
 
-from tools import LoadData
+from tools import load_data
 from tools import remove_hashtag
 
 from sklearn.decomposition import TruncatedSVD
@@ -23,7 +23,6 @@ from sklearn.cluster import KMeans, MiniBatchKMeans
 
 import logging
 from optparse import OptionParser
-import sys
 from time import time
 
 import numpy as np
@@ -83,14 +82,15 @@ opts.n_components = 100  # For LSA, recommended value
 # Load data
 
 fpath = "../data/test_1000.txt"
-dataset = LoadData(fpath)
-print ('dataset shape: %d,%d' %  dataset.shape)
+dataset = load_data(fpath)
+print ('dataset shape: %d,%d' % dataset.shape)
 # Get tweets content
-data = dataset[:,3]
+data = dataset[:, 3]
 # remove hashtags
 data = remove_hashtag(data)
 
-print("Extracting features from the training dataset using a sparse vectorizer")
+print("Extracting features from the training dataset"
+      "using a sparse vectorizer")
 t0 = time()
 if opts.use_hashing:
     if opts.use_idf:
@@ -126,9 +126,9 @@ if opts.n_components:
     # spherical k-means for better results. Since LSA/SVD results are
     # not normalizd, we have to redo the normalization.
     if opts.n_components >= n_features:
-        opts.n_components = int(n_features * 3/5)
+        opts.n_components = int(n_features * 3 / 5)
     svd = TruncatedSVD(opts.n_components)
-    normalizer = Normalizer(copy=False) # in pipeline, must be no copy.
+    normalizer = Normalizer(copy=False)  # in pipeline, must be no copy.
     lsa = make_pipeline(svd, normalizer)
 
     X = lsa.fit_transform(X)
@@ -145,7 +145,7 @@ if opts.n_components:
 
 ###############################################################################
 # Do the actual clustering
-true_k = 2 # actually, I do not know how many clusters
+true_k = 2  # actually, I do not know how many clusters
 
 if opts.minibatch:
     km = MiniBatchKMeans(n_clusters=true_k, init='k-means++', n_init=1,
@@ -163,7 +163,7 @@ print()
 # The result figure is NOT like the text book. There is NO
 # obvious turning point.
 # But, There is a turing point, when K is 3.
-def should_iter(km = km):
+def should_iter(km=km):
     print("Should run k means many times?")
     n_iter = 100
     n_samples = X.shape[0]
@@ -177,13 +177,13 @@ def should_iter(km = km):
 
     # show sses
     sses.sort()
-    sses = map(lambda x: int(x)/10*10, sses)  # 10 is the section size
+    sses = map(lambda x: int(x) / 10 * 10, sses)  # 10 is the section size
     sse_count = Counter(sses)
     sse_sorted = sorted(sse_count.keys())
     cnt = map(sse_count.get, sse_sorted)
     print(sse_sorted)
     print(cnt)
-    plt.bar(sse_sorted, cnt, width=10-1)
+    plt.bar(sse_sorted, cnt, width=10 - 1)
     plt.xlabel("SSE")
     plt.ylabel("Count")
     plt.title(("n_iter = %d, n_samples = %d" % (n_iter, n_samples)))
@@ -202,8 +202,8 @@ def get_silhouette(km, sses):
     """
     sse = np.median(sses)
     width = (max(sses) - min(sses)) / 10
-    upp = sse+width
-    low = sse-width
+    upp = sse + width
+    low = sse - width
 
     cur_sse = low - 10
 
@@ -223,8 +223,9 @@ def get_silhouette(km, sses):
     silhouette_avg = silhouette_score(X, cluster_labels)
     return silhouette_avg, cluster_labels
 
+
 # get SSEs and Silhouettes with diffirent K
-def validate(km = km, n_iter = 100, range_k = [2, 5]):
+def validate(km=km, n_iter=100, range_k=[2, 5]):
     """
     Get SSE and SC for each k.
 
@@ -251,7 +252,7 @@ def validate(km = km, n_iter = 100, range_k = [2, 5]):
             # print("Clustering sparse data with %s" % km)
             km.fit(X)
             sses.append(km.inertia_)
-        sse = np.median(sses) # set sse for this K
+        sse = np.median(sses)  # set sse for this K
         k_sse.append(sse)
 
         # get SC
@@ -260,7 +261,8 @@ def validate(km = km, n_iter = 100, range_k = [2, 5]):
 
         # save clustring result
         save_clustering_result(km, data)  # data is tweet content
-    print("validation done in %fs" % (time()-time0))
+
+    print("validation done in %fs" % (time() - time0))
     print("repeated %d times" % n_iter)
     print()
     print()
@@ -273,12 +275,12 @@ def plot_sse_and_silhouette(ks, sses, silhouettes):
     sses = map(int, sses)
 
     # Create a subplot with 1 row and 2 columns
-    fig, (ax1, ax2) = plt.subplots(1,2)
+    fig, (ax1, ax2) = plt.subplots(1, 2)
     fig.set_size_inches(18, 7)
 
     # The 1st subplot is SSE plot
-    #ax1.set_xlim([])
-    #ax1.set_ylim([])
+    # ax1.set_xlim([])
+    # ax1.set_ylim([])
     ax1.plot(ks, sses)
     ax1.scatter(ks, sses)
     ax1.set_xlabel("k")
@@ -286,7 +288,6 @@ def plot_sse_and_silhouette(ks, sses, silhouettes):
     ax1.set_ylim(0, max(sses))
 
     ax1.set_title("The SSE plot for the various clusters.")
-
 
     # The 2nd subplot is Silhouette plot
     # print(silhouettes)
@@ -297,7 +298,6 @@ def plot_sse_and_silhouette(ks, sses, silhouettes):
     ax2.set_ylim(0, 1)
     ax2.set_title("The silhouette plot for the various clusters.")
 
-    #
     plt.suptitle("KMeans: %d samples, repeat %d times" % (n_samples, n_iter))
     plt.show()
 
@@ -316,8 +316,9 @@ def save_test_result(n, n_iter, ks, sses, scs):
     will be covered.
     fix: append timestamp to the tail of file name.
     """
-    file_name = 'kmeans_test_res_{}n_{}times_{}.csv'.format(n, n_iter, int(time()))
-    file_path = test_res_dir + '/' +  file_name
+    file_name = 'kmeans_test_res_{}n_{}times_{}.csv'.format(
+                n, n_iter, int(time()))
+    file_path = test_res_dir + '/' + file_name
 
     data = np.asarray([ks, sses, scs]).T  # bug: k will be change to float
     df = DataFrame(data, columns=['ks', 'sses', 'scs'])
@@ -336,7 +337,7 @@ def save_clustering_result(km, tweets):
     k = km.n_clusters
     n = len(labels)
     file_name = "kmeans_res_{}n_{}k_{}.csv".format(n, k, int(time()))
-    file_path = test_res_dir + '/' +  file_name
+    file_path = test_res_dir + '/' + file_name
 
     result_df = DataFrame()
     result_df['label'] = labels
@@ -352,11 +353,12 @@ if __name__ == '__main__':
     """
     Test
     """
-    #should_iter() # YES
-    n_iter = 10 # make sure more than 20
-    range_k = range(2,10)
-    ks, sses, silhouettes = validate(n_iter=n_iter, range_k=range_k) # fast and enough
-    #k_sse = validate() # slow but more accurate
-    #plot_sse_and_silhouette(ks, sses, silhouettes)
+    # should_iter() # YES
+    n_iter = 10  # make sure more than 20
+    range_k = range(2, 10)
+    ks, sses, silhouettes = validate(
+        n_iter=n_iter, range_k=range_k)  # fast and enough
+    # k_sse = validate() # slow but more accurate
+    # plot_sse_and_silhouette(ks, sses, silhouettes)
 
     save_test_result(n_samples, n_iter, ks, sses, silhouettes)
