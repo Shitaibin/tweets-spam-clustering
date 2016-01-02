@@ -24,6 +24,7 @@ from nltk import word_tokenize
 from nltk.stem.porter import PorterStemmer
 import string
 
+from scipy import dot, mat
 
 # Display progress logs on stdout
 logging.basicConfig(level=logging.INFO,
@@ -33,7 +34,7 @@ logger = logging.getLogger('tweetspamtools')
 
 #################################################
 # Load data
-def LoadData(fname):
+def load_data(fname):
     """
     Load data form specific file.
 
@@ -48,7 +49,7 @@ def LoadData(fname):
     try:
         with open(fname) as f:
             for line in f:
-                sid, stamp, degree, content, url = SplitRecord(line)
+                sid, stamp, degree, content, url = split_record(line)
                 tid_list.append(sid)
                 timestamp_list.append(stamp)
                 degree_list.append(degree)
@@ -97,7 +98,7 @@ def get_hashtag(tweet):
     return hashtag
 
 
-def SplitRecord(tweet):
+def split_record(tweet):
     """
     A tweet record is formated like below:
 
@@ -127,7 +128,6 @@ def SplitRecord(tweet):
 # Tfidf transform
 
 
-
 def text_stem(text, stemmer):
     return [stemmer.stem(term) for term in text]
 
@@ -140,7 +140,7 @@ def tokenize(text):
     return text_stem(tokenized, stemmer)
 
 
-def Stem_TfidfTransform(documents):
+def stem_tfidf_transform(documents):
     vectorizer = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
     transformed = vectorizer.fit_transform(documents)
     try:
@@ -152,10 +152,7 @@ def Stem_TfidfTransform(documents):
 
 #################################################
 # Cosin similarity
-from scipy import dot, mat
-
-
-def CosSimilarity(vecx, vecy):
+def cos_similarity(vecx, vecy):
     """
     Using for cacluate cosin similarity of document vectors.
 
@@ -163,7 +160,8 @@ def CosSimilarity(vecx, vecy):
     NORMAL. So, there size is 1.
     """
     # if vecx is list, no need transform to matrix
-    if type(vecx) == type([]):
+    # if type(vecx) == type([]):
+    if isinstance(vecx, list):
         return float(dot(vecx, vecy))
     # if other type, we transform to matrix
     a = mat(vecx)
@@ -174,7 +172,7 @@ def CosSimilarity(vecx, vecy):
 
 #################################################
 # Show 2d matrix by dot and cross mark
-def Plot_2D_Matrix(mat):
+def plot_2d_matrix(mat):
     """
     Plot 2d matrix by dot and cross mark.
 
@@ -394,7 +392,7 @@ def analyze_result(file_path, save=False, out_dir="."):
     save: default True, save the analyzing result.
     out_dir: where to save the analyzing result.
     """
-    input_fname = file_path.split("/")[-1][:-4]
+    # input_fname = file_path.split("/")[-1][:-4]
 
     labels_tweets = pd.read_csv(file_path)
     labels_text = merge_tweets(labels_tweets)
@@ -416,7 +414,7 @@ def merge_cluster_result(file_path):
     """
     Merge clustering result based on merge rules.
     """
-    input_fname = file_path.split("/")[-1][:-4]
+    # input_fname = file_path.split("/")[-1][:-4]
 
     labels_tweets = pd.read_csv(file_path)
     labels_text = merge_tweets(labels_tweets)

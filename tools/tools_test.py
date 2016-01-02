@@ -1,8 +1,8 @@
 import unittest
 from unittest import TestCase
 from tools import remove_hashtag, get_hashtag
-from tools import SplitRecord, text_stem, tokenize
-from tools import CosSimilarity
+from tools import split_record, text_stem, tokenize
+from tools import cos_similarity
 from tools import merge_tweets, get_m_tags, sort_tag_counts
 from tools import get_cluster_tag, get_merge_rules
 from tools import timestamp_to_datehour
@@ -37,9 +37,9 @@ class ToolsTestCase(TestCase):
 
     ##################################################
     # Unittest for Visulize fucntions
-    def test_SplitRecord(self):
+    def test_split_record(self):
         """
-        Unittest for function SplitRecord.
+        Unittest for function split_record.
         """
         # test data
         sid = '123456'
@@ -52,7 +52,7 @@ class ToolsTestCase(TestCase):
             ' |*|' + url
         tweet_tuple = (sid, stamp, degree, content, url)
         # test result
-        ret = SplitRecord(tweet)
+        ret = split_record(tweet)
         # data and result should be equal
         self.assertEqual(tweet_tuple, ret, msg="Split result should be \
                          {}, rather than{}".format(tweet_tuple, ret))
@@ -87,21 +87,21 @@ class ToolsTestCase(TestCase):
                           should be \n{},\n rather than \n{}".format(
             result, tokenize_result))
 
-    def test_CosSimilarity(self):
+    def test_cos_similarity(self):
         """
         Unittest for function CosSimilirity.
 
-        The input parameters is normalize vector/list. So, CosSimilarity
+        The input parameters is normalize vector/list. So, cos_similarity
         just caculate the dot product. In this test, we just need
         to test dot product is enough.
         """
-        self.assertEqual(8, CosSimilarity([1, 2], [2, 3]), msg="The cosine\
+        self.assertEqual(8, cos_similarity([1, 2], [2, 3]), msg="The cosine\
                           similarity of (1,2) and (2,3) should be \
                          {}".format(8))
-        self.assertEqual(0, CosSimilarity([0, 0], [2, 3]), msg="The cosine\
+        self.assertEqual(0, cos_similarity([0, 0], [2, 3]), msg="The cosine\
                           similarity of (0,0) and (2,3) should be \
                          {}".format(0))
-        self.assertEqual(4, CosSimilarity([-1, 2], [2, 3]), msg="The cosine\
+        self.assertEqual(4, cos_similarity([-1, 2], [2, 3]), msg="The cosine\
                           similarity of (-1,2) and (2,3) should be \
                          {}".format(4))
 
