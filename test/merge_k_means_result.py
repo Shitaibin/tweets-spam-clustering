@@ -10,7 +10,7 @@ from tools import merge_cluster_result, analyze_result
 
 import os
 
-pre_fix = "kmeans_res_1000n"
+pre_fix = "kmeans_res_8432n"
 
 files = os.listdir("test_result")
 
