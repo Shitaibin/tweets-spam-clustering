@@ -1,0 +1,944 @@
+k = 12
+Before merge
+tags of each cluster:
+label 0: [('howard', 681), ('juwan', 681), ('bevacqua', 450)]
+label 1: [('batman', 433), ('robin', 432), ('gaga', 87)]
+label 2: [('leadstosex', 544), ('bieber', 63), ('illbeatchoass', 39)]
+label 3: [('ohreally', 440), ('abel', 331), ('membrillo', 331)]
+label 4: [('ohreally', 332), ('jay', 328), ('worley', 322)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 6: [('review', 1391), ('ohreally', 1021), ('trynono', 853)]
+label 7: [('shaqretires', 674), ('center', 96), ('space', 96)]
+label 8: [('somebody', 173), ('use', 158), ('marilyn', 141)]
+label 9: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 10: [('gaga', 601), ('lady', 601), ('icloud', 335)]
+label 11: [('illbeatchoass', 955), ('lrg', 594), ('dirk', 554)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 3
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+
+After merge
+tags of each cluster:
+label 0: [('howard', 681), ('juwan', 681), ('bevacqua', 450)]
+label 1: [('batman', 433), ('robin', 432), ('gaga', 87)]
+label 2: [('leadstosex', 544), ('bieber', 63), ('illbeatchoass', 39)]
+label 3: [('ohreally', 772), ('marilynmonroe', 355), ('abel', 332)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 6: [('review', 1391), ('ohreally', 1021), ('trynono', 853)]
+label 7: [('shaqretires', 674), ('center', 96), ('space', 96)]
+label 8: [('somebody', 173), ('use', 158), ('marilyn', 141)]
+label 9: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 10: [('gaga', 601), ('lady', 601), ('icloud', 335)]
+label 11: [('illbeatchoass', 955), ('lrg', 594), ('dirk', 554)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+--------------------------------------
+k = 3
+Before merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1329), ('lrg', 1062), ('icloud', 916)]
+label 1: [('leadstosex', 1131), ('clothing', 699), ('vintage', 696)]
+label 2: [('ohreally', 1669), ('review', 1401), ('trynono', 853)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+
+After merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1329), ('lrg', 1062), ('icloud', 916)]
+label 1: [('leadstosex', 1131), ('clothing', 699), ('vintage', 696)]
+label 2: [('ohreally', 1669), ('review', 1401), ('trynono', 853)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+--------------------------------------
+k = 15
+Before merge
+tags of each cluster:
+label 0: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 1: [('ohreally', 841), ('abel', 330), ('membrillo', 330)]
+label 2: [('leadstosex', 680), ('justin', 338), ('sex', 330)]
+label 3: [('batman', 219), ('robin', 218), ('illbeatchoass', 208)]
+label 4: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 5: [('michael', 402), ('mcdonald', 272), ('owen', 133)]
+label 6: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 7: [('jay', 343), ('worley', 340), ('kevin', 165)]
+label 8: [('shaqretires', 542), ('just', 63), ('shaq', 52)]
+label 9: [('kazaam', 340), ('marilynmonroe', 42), ('cudi', 33)]
+label 10: [('beat', 321), ('bet', 320), ('illbeatchoass', 112)]
+label 11: [('review', 1357), ('ohreally', 883), ('trynono', 819)]
+label 12: [('amazing', 324), ('video', 310), ('surprised', 291)]
+label 13: [('believe', 526), ('won', 521), ('site', 274)]
+label 14: [('illbeatchoass', 610), ('lrg', 547), ('just', 460)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+
+After merge
+tags of each cluster:
+label 0: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 1: [('ohreally', 841), ('abel', 330), ('membrillo', 330)]
+label 2: [('leadstosex', 680), ('justin', 338), ('sex', 330)]
+label 3: [('batman', 219), ('robin', 218), ('illbeatchoass', 208)]
+label 4: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 5: [('michael', 402), ('mcdonald', 272), ('owen', 133)]
+label 6: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 7: [('jay', 343), ('worley', 340), ('kevin', 165)]
+label 8: [('shaqretires', 542), ('just', 63), ('shaq', 52)]
+label 9: [('kazaam', 340), ('marilynmonroe', 42), ('cudi', 33)]
+label 10: [('beat', 321), ('bet', 320), ('illbeatchoass', 112)]
+label 11: [('review', 1357), ('ohreally', 883), ('trynono', 819)]
+label 12: [('amazing', 324), ('video', 310), ('surprised', 291)]
+label 13: [('believe', 526), ('won', 521), ('site', 274)]
+label 14: [('illbeatchoass', 610), ('lrg', 547), ('just', 460)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+--------------------------------------
+k = 17
+Before merge
+tags of each cluster:
+label 0: [('just', 587), ('wow', 320), ('shocking', 308)]
+label 1: [('ohreally', 749), ('marilynmonroe', 460), ('review', 286)]
+label 2: [('gaga', 564), ('lady', 564), ('icloud', 335)]
+label 3: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 4: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 5: [('leadstosex', 451), ('bieber', 63), ('justin', 35)]
+label 6: [('video', 311), ('amazing', 299), ('surprised', 292)]
+label 7: [('illbeatchoass', 522), ('gump', 316), ('whenfishridebicycles', 313)]
+label 8: [('bevacqua', 347), ('jonas', 347), ('lrg', 92)]
+label 9: [('shaqretires', 692), ('ohreally', 333), ('abel', 330)]
+label 10: [('believe', 526), ('won', 521), ('site', 274)]
+label 11: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 12: [('songz', 191), ('trey', 187), ('rt', 46)]
+label 13: [('batman', 375), ('robin', 374), ('gaga', 86)]
+label 14: [('jay', 344), ('worley', 341), ('kazaam', 334)]
+label 15: [('howard', 359), ('juwan', 359), ('beat', 287)]
+label 16: [('review', 1105), ('ohreally', 627), ('trynono', 567)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+
+After merge
+tags of each cluster:
+label 0: [('just', 587), ('wow', 320), ('shocking', 308)]
+label 1: [('ohreally', 749), ('marilynmonroe', 460), ('review', 286)]
+label 2: [('gaga', 564), ('lady', 564), ('icloud', 335)]
+label 3: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 4: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 5: [('leadstosex', 451), ('bieber', 63), ('justin', 35)]
+label 6: [('video', 311), ('amazing', 299), ('surprised', 292)]
+label 7: [('illbeatchoass', 522), ('gump', 316), ('whenfishridebicycles', 313)]
+label 8: [('bevacqua', 347), ('jonas', 347), ('lrg', 92)]
+label 9: [('shaqretires', 692), ('ohreally', 333), ('abel', 330)]
+label 10: [('believe', 526), ('won', 521), ('site', 274)]
+label 11: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 12: [('songz', 191), ('trey', 187), ('rt', 46)]
+label 13: [('batman', 375), ('robin', 374), ('gaga', 86)]
+label 14: [('jay', 344), ('worley', 341), ('kazaam', 334)]
+label 15: [('howard', 359), ('juwan', 359), ('beat', 287)]
+label 16: [('review', 1105), ('ohreally', 627), ('trynono', 567)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+--------------------------------------
+k = 4
+Before merge
+tags of each cluster:
+label 0: [('ohreally', 1668), ('review', 1401), ('trynono', 853)]
+label 1: [('leadstosex', 1243), ('illbeatchoass', 1223), ('lrg', 956)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 446)]
+label 3: [('gaga', 688), ('lady', 688), ('believe', 527)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+
+After merge
+tags of each cluster:
+label 0: [('ohreally', 1668), ('review', 1401), ('trynono', 853)]
+label 1: [('leadstosex', 1243), ('illbeatchoass', 1223), ('lrg', 956)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 446)]
+label 3: [('gaga', 688), ('lady', 688), ('believe', 527)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+--------------------------------------
+k = 14
+Before merge
+tags of each cluster:
+label 0: [('springfield', 111), ('amazing', 23), ('just', 18)]
+label 1: [('illbeatchoass', 530), ('lrg', 328), ('dirk', 278)]
+label 2: [('leadstosex', 676), ('justin', 338), ('sex', 329)]
+label 3: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 4: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 5: [('believe', 528), ('won', 521), ('site', 274)]
+label 6: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 7: [('ohreally', 748), ('abel', 327), ('membrillo', 327)]
+label 8: [('shaqretires', 541), ('kazaam', 320), ('kevin', 158)]
+label 9: [('amazing', 557), ('video', 358), ('surprised', 273)]
+label 10: [('howard', 530), ('juwan', 530), ('just', 369)]
+label 11: [('bevacqua', 299), ('jonas', 299), ('batman', 280)]
+label 12: [('jay', 351), ('worley', 348), ('way', 47)]
+label 13: [('leadstosex', 191), ('whenfishridebicycles', 187), ('illbeatchoass', 180)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 2
+
+After merge
+tags of each cluster:
+label 0: [('springfield', 111), ('amazing', 23), ('just', 18)]
+label 1: [('illbeatchoass', 530), ('lrg', 328), ('dirk', 278)]
+label 2: [('leadstosex', 867), ('justin', 373), ('sex', 339)]
+label 3: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 4: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 5: [('believe', 528), ('won', 521), ('site', 274)]
+label 6: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 7: [('ohreally', 748), ('abel', 327), ('membrillo', 327)]
+label 8: [('shaqretires', 541), ('kazaam', 320), ('kevin', 158)]
+label 9: [('amazing', 557), ('video', 358), ('surprised', 273)]
+label 10: [('howard', 530), ('juwan', 530), ('just', 369)]
+label 11: [('bevacqua', 299), ('jonas', 299), ('batman', 280)]
+label 12: [('jay', 351), ('worley', 348), ('way', 47)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+--------------------------------------
+k = 6
+Before merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1099), ('leadstosex', 898), ('lrg', 831)]
+label 1: [('shaqretires', 902), ('ohreally', 499), ('kazaam', 369)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 448)]
+label 3: [('believe', 526), ('won', 523), ('bevacqua', 452)]
+label 4: [('gaga', 688), ('lady', 688), ('leadstosex', 552)]
+label 5: [('review', 1391), ('ohreally', 1026), ('trynono', 853)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+
+After merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1099), ('leadstosex', 898), ('lrg', 831)]
+label 1: [('shaqretires', 902), ('ohreally', 499), ('kazaam', 369)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 448)]
+label 3: [('believe', 526), ('won', 523), ('bevacqua', 452)]
+label 4: [('gaga', 688), ('lady', 688), ('leadstosex', 552)]
+label 5: [('review', 1391), ('ohreally', 1026), ('trynono', 853)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+--------------------------------------
+k = 7
+Before merge
+tags of each cluster:
+label 0: [('shaqretires', 682), ('just', 67), ('shaq', 52)]
+label 1: [('leadstosex', 720), ('justin', 338), ('sex', 331)]
+label 2: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 3: [('illbeatchoass', 1199), ('lrg', 948), ('dirk', 809)]
+label 4: [('ohreally', 1667), ('review', 1401), ('trynono', 853)]
+label 5: [('believe', 526), ('won', 521), ('site', 274)]
+label 6: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+
+After merge
+tags of each cluster:
+label 0: [('shaqretires', 682), ('just', 67), ('shaq', 52)]
+label 1: [('leadstosex', 720), ('justin', 338), ('sex', 331)]
+label 2: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 3: [('illbeatchoass', 1199), ('lrg', 948), ('dirk', 809)]
+label 4: [('ohreally', 1667), ('review', 1401), ('trynono', 853)]
+label 5: [('believe', 526), ('won', 521), ('site', 274)]
+label 6: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+--------------------------------------
+k = 13
+Before merge
+tags of each cluster:
+label 0: [('jay', 352), ('worley', 348), ('way', 47)]
+label 1: [('amazing', 368), ('video', 338), ('surprised', 291)]
+label 2: [('ohreally', 323), ('marilynmonroe', 218), ('leadstosex', 195)]
+label 3: [('kazaam', 348), ('kevin', 166), ('webster', 166)]
+label 4: [('gaga', 601), ('lady', 601), ('icloud', 335)]
+label 5: [('batman', 398), ('robin', 397), ('gaga', 87)]
+label 6: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 7: [('shaqretires', 784), ('ohreally', 465), ('abel', 332)]
+label 8: [('illbeatchoass', 764), ('lrg', 641), ('howard', 486)]
+label 9: [('leadstosex', 687), ('justin', 338), ('sex', 329)]
+label 10: [('review', 1391), ('ohreally', 1020), ('trynono', 853)]
+label 11: [('believe', 526), ('won', 521), ('site', 275)]
+label 12: [('bevacqua', 413), ('jonas', 413), ('illbeatchoass', 124)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+
+After merge
+tags of each cluster:
+label 0: [('jay', 352), ('worley', 348), ('way', 47)]
+label 1: [('amazing', 368), ('video', 338), ('surprised', 291)]
+label 2: [('ohreally', 323), ('marilynmonroe', 218), ('leadstosex', 195)]
+label 3: [('kazaam', 348), ('kevin', 166), ('webster', 166)]
+label 4: [('gaga', 601), ('lady', 601), ('icloud', 335)]
+label 5: [('batman', 398), ('robin', 397), ('gaga', 87)]
+label 6: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 7: [('shaqretires', 784), ('ohreally', 465), ('abel', 332)]
+label 8: [('illbeatchoass', 764), ('lrg', 641), ('howard', 486)]
+label 9: [('leadstosex', 687), ('justin', 338), ('sex', 329)]
+label 10: [('review', 1391), ('ohreally', 1020), ('trynono', 853)]
+label 11: [('believe', 526), ('won', 521), ('site', 275)]
+label 12: [('bevacqua', 413), ('jonas', 413), ('illbeatchoass', 124)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+--------------------------------------
+k = 18
+Before merge
+tags of each cluster:
+label 0: [('jay', 348), ('worley', 347), ('way', 47)]
+label 1: [('amazing', 662), ('video', 303), ('surprised', 291)]
+label 2: [('gaga', 650), ('lady', 650), ('icloud', 337)]
+label 3: [('ohreally', 640), ('marilynmonroe', 443), ('review', 316)]
+label 4: [('wow', 398), ('just', 363), ('shocking', 309)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 6: [('songz', 191), ('trey', 187), ('rt', 46)]
+label 7: [('leadstosex', 472), ('bieber', 63), ('justin', 35)]
+label 8: [('illbeatchoass', 231), ('batman', 223), ('robin', 222)]
+label 9: [('awesome', 352), ('illbeatchoass', 127), ('dirk', 97)]
+label 10: [('ohreally', 440), ('abel', 327), ('membrillo', 327)]
+label 11: [('review', 1075), ('ohreally', 588), ('hair', 539)]
+label 12: [('totally', 347), ('beyond', 342), ('words', 342)]
+label 13: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 14: [('believe', 526), ('won', 521), ('site', 274)]
+label 15: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 16: [('shaqretires', 444), ('shaq', 52), ('sha', 35)]
+label 17: [('kazaam', 322), ('kevin', 158), ('webster', 158)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 3
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+17 -> 17
+
+After merge
+tags of each cluster:
+label 0: [('jay', 348), ('worley', 347), ('way', 47)]
+label 1: [('amazing', 662), ('video', 303), ('surprised', 291)]
+label 2: [('gaga', 650), ('lady', 650), ('icloud', 337)]
+label 3: [('ohreally', 1080), ('marilynmonroe', 520), ('shaqretires', 371)]
+label 4: [('wow', 398), ('just', 363), ('shocking', 309)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 6: [('songz', 191), ('trey', 187), ('rt', 46)]
+label 7: [('leadstosex', 472), ('bieber', 63), ('justin', 35)]
+label 8: [('illbeatchoass', 231), ('batman', 223), ('robin', 222)]
+label 9: [('awesome', 352), ('illbeatchoass', 127), ('dirk', 97)]
+label 11: [('review', 1075), ('ohreally', 588), ('hair', 539)]
+label 12: [('totally', 347), ('beyond', 342), ('words', 342)]
+label 13: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 14: [('believe', 526), ('won', 521), ('site', 274)]
+label 15: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 16: [('shaqretires', 444), ('shaq', 52), ('sha', 35)]
+label 17: [('kazaam', 322), ('kevin', 158), ('webster', 158)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+17 -> 17
+--------------------------------------
+k = 11
+Before merge
+tags of each cluster:
+label 0: [('clothing', 698), ('vintage', 696), ('buy', 446)]
+label 1: [('batman', 314), ('robin', 313), ('songz', 152)]
+label 2: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 3: [('leadstosex', 721), ('justin', 339), ('sex', 329)]
+label 4: [('illbeatchoass', 954), ('lrg', 743), ('dirk', 619)]
+label 5: [('ohreally', 752), ('abel', 331), ('membrillo', 331)]
+label 6: [('shaqretires', 629), ('jay', 339), ('worley', 334)]
+label 7: [('kazaam', 367), ('somebody', 145), ('use', 145)]
+label 8: [('gaga', 687), ('lady', 687), ('icloud', 337)]
+label 9: [('believe', 529), ('won', 521), ('site', 274)]
+label 10: [('bevacqua', 449), ('jonas', 449), ('illbeatchoass', 133)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+
+After merge
+tags of each cluster:
+label 0: [('clothing', 698), ('vintage', 696), ('buy', 446)]
+label 1: [('batman', 314), ('robin', 313), ('songz', 152)]
+label 2: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 3: [('leadstosex', 721), ('justin', 339), ('sex', 329)]
+label 4: [('illbeatchoass', 954), ('lrg', 743), ('dirk', 619)]
+label 5: [('ohreally', 752), ('abel', 331), ('membrillo', 331)]
+label 6: [('shaqretires', 629), ('jay', 339), ('worley', 334)]
+label 7: [('kazaam', 367), ('somebody', 145), ('use', 145)]
+label 8: [('gaga', 687), ('lady', 687), ('icloud', 337)]
+label 9: [('believe', 529), ('won', 521), ('site', 274)]
+label 10: [('bevacqua', 449), ('jonas', 449), ('illbeatchoass', 133)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+--------------------------------------
+k = 10
+Before merge
+tags of each cluster:
+label 0: [('illbeatchoass', 986), ('lrg', 915), ('howard', 711)]
+label 1: [('kazaam', 355), ('jay', 348), ('worley', 342)]
+label 2: [('shaqretires', 689), ('just', 67), ('shaq', 52)]
+label 3: [('review', 1357), ('ohreally', 883), ('trynono', 819)]
+label 4: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 6: [('leadstosex', 557), ('bieber', 64), ('illbeatchoass', 42)]
+label 7: [('bevacqua', 375), ('jonas', 375), ('batman', 279)]
+label 8: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 9: [('ohreally', 811), ('abel', 331), ('membrillo', 331)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+
+After merge
+tags of each cluster:
+label 0: [('illbeatchoass', 986), ('lrg', 915), ('howard', 711)]
+label 1: [('kazaam', 355), ('jay', 348), ('worley', 342)]
+label 2: [('shaqretires', 689), ('just', 67), ('shaq', 52)]
+label 3: [('review', 1357), ('ohreally', 883), ('trynono', 819)]
+label 4: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 5: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 6: [('leadstosex', 557), ('bieber', 64), ('illbeatchoass', 42)]
+label 7: [('bevacqua', 375), ('jonas', 375), ('batman', 279)]
+label 8: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 9: [('ohreally', 811), ('abel', 331), ('membrillo', 331)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+--------------------------------------
+k = 5
+Before merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1166), ('lrg', 1033), ('howard', 743)]
+label 1: [('ohreally', 1647), ('review', 1401), ('trynono', 853)]
+label 2: [('leadstosex', 1002), ('gaga', 688), ('lady', 688)]
+label 3: [('clothing', 700), ('vintage', 696), ('buy', 446)]
+label 4: [('shaqretires', 674), ('kazaam', 382), ('jay', 358)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+
+After merge
+tags of each cluster:
+label 0: [('illbeatchoass', 1166), ('lrg', 1033), ('howard', 743)]
+label 1: [('ohreally', 1647), ('review', 1401), ('trynono', 853)]
+label 2: [('leadstosex', 1002), ('gaga', 688), ('lady', 688)]
+label 3: [('clothing', 700), ('vintage', 696), ('buy', 446)]
+label 4: [('shaqretires', 674), ('kazaam', 382), ('jay', 358)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+--------------------------------------
+k = 8
+Before merge
+tags of each cluster:
+label 0: [('illbeatchoass', 903), ('lrg', 845), ('howard', 616)]
+label 1: [('review', 1391), ('ohreally', 1018), ('trynono', 853)]
+label 2: [('leadstosex', 698), ('justin', 338), ('sex', 330)]
+label 3: [('batman', 238), ('robin', 237), ('leadstosex', 223)]
+label 4: [('shaqretires', 893), ('ohreally', 786), ('marilynmonroe', 407)]
+label 5: [('clothing', 698), ('vintage', 696), ('buy', 448)]
+label 6: [('bevacqua', 476), ('jonas', 476), ('place', 243)]
+label 7: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+
+After merge
+tags of each cluster:
+label 0: [('illbeatchoass', 903), ('lrg', 845), ('howard', 616)]
+label 1: [('review', 1391), ('ohreally', 1018), ('trynono', 853)]
+label 2: [('leadstosex', 698), ('justin', 338), ('sex', 330)]
+label 3: [('batman', 238), ('robin', 237), ('leadstosex', 223)]
+label 4: [('shaqretires', 893), ('ohreally', 786), ('marilynmonroe', 407)]
+label 5: [('clothing', 698), ('vintage', 696), ('buy', 448)]
+label 6: [('bevacqua', 476), ('jonas', 476), ('place', 243)]
+label 7: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+--------------------------------------
+k = 9
+Before merge
+tags of each cluster:
+label 0: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 1: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 2: [('ohreally', 484), ('batman', 237), ('robin', 236)]
+label 3: [('leadstosex', 709), ('justin', 338), ('sex', 331)]
+label 4: [('abel', 331), ('membrillo', 331), ('ohreally', 319)]
+label 5: [('kazaam', 389), ('marilynmonroe', 45), ('cudi', 36)]
+label 6: [('shaqretires', 639), ('jay', 345), ('worley', 341)]
+label 7: [('review', 1391), ('ohreally', 1020), ('trynono', 853)]
+label 8: [('illbeatchoass', 1120), ('lrg', 1001), ('howard', 741)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+
+After merge
+tags of each cluster:
+label 0: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 1: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 2: [('ohreally', 484), ('batman', 237), ('robin', 236)]
+label 3: [('leadstosex', 709), ('justin', 338), ('sex', 331)]
+label 4: [('abel', 331), ('membrillo', 331), ('ohreally', 319)]
+label 5: [('kazaam', 389), ('marilynmonroe', 45), ('cudi', 36)]
+label 6: [('shaqretires', 639), ('jay', 345), ('worley', 341)]
+label 7: [('review', 1391), ('ohreally', 1020), ('trynono', 853)]
+label 8: [('illbeatchoass', 1120), ('lrg', 1001), ('howard', 741)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+--------------------------------------
+k = 19
+Before merge
+tags of each cluster:
+label 0: [('shaqretires', 531), ('kevin', 142), ('webster', 142)]
+label 1: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 2: [('totally', 349), ('beyond', 347), ('words', 347)]
+label 3: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 4: [('naked', 209), ('gaga', 208), ('lady', 208)]
+label 5: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 6: [('ohreally', 568), ('abel', 329), ('membrillo', 329)]
+label 7: [('batman', 297), ('robin', 296), ('lrg', 62)]
+label 8: [('gaga', 480), ('lady', 480), ('icloud', 236)]
+label 9: [('illbeatchoass', 455), ('lrg', 392), ('wow', 318)]
+label 10: [('amazing', 641), ('video', 305), ('surprised', 293)]
+label 11: [('leadstosex', 466), ('bieber', 63), ('justin', 35)]
+label 12: [('jay', 335), ('worley', 332), ('ohreally', 278)]
+label 13: [('bevacqua', 343), ('jonas', 343), ('illbeatchoass', 96)]
+label 14: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 15: [('kazaam', 348), ('somebody', 139), ('use', 139)]
+label 16: [('believe', 525), ('won', 521), ('site', 274)]
+label 17: [('signori', 86), ('beppe', 85), ('16', 26)]
+label 18: [('illbeatchoass', 176), ('whenfishridebicycles', 163), ('gump', 142)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+17 -> 17
+18 -> 9
+
+After merge
+tags of each cluster:
+label 0: [('shaqretires', 531), ('kevin', 142), ('webster', 142)]
+label 1: [('clothing', 697), ('vintage', 696), ('buy', 446)]
+label 2: [('totally', 349), ('beyond', 347), ('words', 347)]
+label 3: [('review', 1391), ('ohreally', 917), ('trynono', 853)]
+label 4: [('naked', 209), ('gaga', 208), ('lady', 208)]
+label 5: [('place', 244), ('folks', 243), ('groveling', 243)]
+label 6: [('ohreally', 568), ('abel', 329), ('membrillo', 329)]
+label 7: [('batman', 297), ('robin', 296), ('lrg', 62)]
+label 8: [('gaga', 480), ('lady', 480), ('icloud', 236)]
+label 9: [('illbeatchoass', 631), ('lrg', 413), ('gump', 411)]
+label 10: [('amazing', 641), ('video', 305), ('surprised', 293)]
+label 11: [('leadstosex', 466), ('bieber', 63), ('justin', 35)]
+label 12: [('jay', 335), ('worley', 332), ('ohreally', 278)]
+label 13: [('bevacqua', 343), ('jonas', 343), ('illbeatchoass', 96)]
+label 14: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 15: [('kazaam', 348), ('somebody', 139), ('use', 139)]
+label 16: [('believe', 525), ('won', 521), ('site', 274)]
+label 17: [('signori', 86), ('beppe', 85), ('16', 26)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 15
+16 -> 16
+17 -> 17
+--------------------------------------
+k = 2
+Before merge
+tags of each cluster:
+label 0: [('leadstosex', 1550), ('illbeatchoass', 1389), ('lrg', 1092)]
+label 1: [('ohreally', 1771), ('review', 1401), ('shaqretires', 1307)]
+
+merge rules:
+0 -> 0
+1 -> 1
+
+After merge
+tags of each cluster:
+label 0: [('leadstosex', 1550), ('illbeatchoass', 1389), ('lrg', 1092)]
+label 1: [('ohreally', 1771), ('review', 1401), ('shaqretires', 1307)]
+
+merge rules:
+0 -> 0
+1 -> 1
+--------------------------------------
+k = 16
+Before merge
+tags of each cluster:
+label 0: [('place', 241), ('folks', 240), ('groveling', 240)]
+label 1: [('shaqretires', 590), ('just', 63), ('video', 50)]
+label 2: [('review', 1391), ('ohreally', 1021), ('trynono', 853)]
+label 3: [('blake', 321), ('lively', 321), ('leadstosex', 104)]
+label 4: [('icloud', 226), ('dash', 51), ('stacey', 51)]
+label 5: [('ohreally', 335), ('batman', 213), ('robin', 212)]
+label 6: [('howard', 521), ('juwan', 521), ('bevacqua', 383)]
+label 7: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 8: [('believe', 516), ('won', 513), ('site', 267)]
+label 9: [('leadstosex', 460), ('bieber', 58), ('justin', 35)]
+label 10: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 11: [('somebody', 166), ('use', 149), ('marilyn', 123)]
+label 12: [('illbeatchoass', 638), ('lrg', 444), ('amazing', 386)]
+label 13: [('jay', 341), ('worley', 336), ('kazaam', 300)]
+label 14: [('gaga', 676), ('lady', 676), ('icloud', 337)]
+label 15: [('ohreally', 440), ('abel', 330), ('membrillo', 330)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+15 -> 5
+
+After merge
+tags of each cluster:
+label 0: [('place', 241), ('folks', 240), ('groveling', 240)]
+label 1: [('shaqretires', 590), ('just', 63), ('video', 50)]
+label 2: [('review', 1391), ('ohreally', 1021), ('trynono', 853)]
+label 3: [('blake', 321), ('lively', 321), ('leadstosex', 104)]
+label 4: [('icloud', 226), ('dash', 51), ('stacey', 51)]
+label 5: [('ohreally', 775), ('abel', 331), ('membrillo', 331)]
+label 6: [('howard', 521), ('juwan', 521), ('bevacqua', 383)]
+label 7: [('justin', 302), ('leadstosex', 301), ('sex', 301)]
+label 8: [('believe', 516), ('won', 513), ('site', 267)]
+label 9: [('leadstosex', 460), ('bieber', 58), ('justin', 35)]
+label 10: [('clothing', 697), ('vintage', 696), ('buy', 448)]
+label 11: [('somebody', 166), ('use', 149), ('marilyn', 123)]
+label 12: [('illbeatchoass', 638), ('lrg', 444), ('amazing', 386)]
+label 13: [('jay', 341), ('worley', 336), ('kazaam', 300)]
+label 14: [('gaga', 676), ('lady', 676), ('icloud', 337)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+9 -> 9
+10 -> 10
+11 -> 11
+12 -> 12
+13 -> 13
+14 -> 14
+--------------------------------------

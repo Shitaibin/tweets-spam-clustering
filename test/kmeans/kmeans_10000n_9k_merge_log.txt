@@ -1,0 +1,162 @@
+
+k =  2
+Before merge
+tags of each cluster:
+label 0: [('review', 1405), ('ohreally', 1049), ('trynono', 853)]
+label 1: [('lrg', 1070), ('howard', 745), ('juwan', 745)]
+
+merge rules:
+0 -> 0
+1 -> 1
+There is no need to merge.
+
+---------------------------------------------
+
+k =  3
+Before merge
+tags of each cluster:
+label 0: [('lrg', 1063), ('howard', 745), ('juwan', 745)]
+label 1: [('clothing', 700), ('vintage', 696), ('gaga', 688)]
+label 2: [('review', 1391), ('trynono', 853), ('ohreally', 712)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+There is no need to merge.
+
+---------------------------------------------
+
+k =  4
+Before merge
+tags of each cluster:
+label 0: [('video', 505), ('justin', 430), ('sex', 358)]
+label 1: [('lrg', 1054), ('howard', 745), ('juwan', 745)]
+label 2: [('clothing', 700), ('vintage', 696), ('gaga', 688)]
+label 3: [('review', 1391), ('trynono', 853), ('ohreally', 711)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+There is no need to merge.
+
+---------------------------------------------
+
+k =  5
+Before merge
+tags of each cluster:
+label 0: [('gaga', 688), ('lady', 688), ('icloud', 342)]
+label 1: [('justin', 304), ('sex', 303), ('craving', 297)]
+label 2: [('dirk', 1236), ('noringski', 1213), ('lrg', 1044)]
+label 3: [('kazaam', 374), ('jay', 358), ('worley', 351)]
+label 4: [('review', 1391), ('trynono', 853), ('ohreally', 712)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+There is no need to merge.
+
+--------------------------------------------
+
+k =  6
+Before merge
+tags of each cluster:
+label 0: [('gaga', 600), ('lady', 600), ('icloud', 445)]
+label 1: [('batman', 418), ('robin', 417), ('wow', 406)]
+label 2: [('lrg', 857), ('amazing', 668), ('howard', 620)]
+label 3: [('justin', 304), ('sex', 303), ('craving', 297)]
+label 4: [('review', 1391), ('trynono', 853), ('ohreally', 711)]
+label 5: [('clothing', 700), ('vintage', 696), ('buy', 455)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+There is no need to merge.
+
+----------------------------------------------
+
+k =  7
+Before merge
+tags of each cluster:
+label 0: [('review', 1391), ('trynono', 853), ('ohreally', 711)]
+label 1: [('lrg', 562), ('believe', 523), ('amazing', 520)]
+label 2: [('jay', 352), ('worley', 348), ('kazaam', 344)]
+label 3: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 4: [('clothing', 700), ('vintage', 696), ('buy', 455)]
+label 5: [('justin', 304), ('sex', 303), ('craving', 297)]
+label 6: [('howard', 629), ('juwan', 629), ('lrg', 493)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+There is no need to merge.
+
+----------------------------------------------
+
+k =  8
+Before merge
+tags of each cluster:
+label 0: [('lrg', 578), ('dirk', 434), ('howard', 428)]
+label 1: [('review', 1391), ('trynono', 853), ('ohreally', 712)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 455)]
+label 3: [('jay', 352), ('worley', 348), ('kazaam', 336)]
+label 4: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 5: [('justin', 304), ('sex', 303), ('craving', 297)]
+label 6: [('amazing', 633), ('just', 633), ('believe', 526)]
+label 7: [('marilynmonroe', 221), ('batman', 210), ('robin', 209)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+There is no need to merge.
+
+---------------------------------------------------
+
+k =  9
+Before merge
+tags of each cluster:
+label 0: [('beat', 323), ('bet', 322), ('lrg', 105)]
+label 1: [('gaga', 688), ('lady', 688), ('icloud', 337)]
+label 2: [('clothing', 700), ('vintage', 696), ('buy', 455)]
+label 3: [('believe', 527), ('won', 521), ('site', 278)]
+label 4: [('justin', 304), ('sex', 303), ('craving', 297)]
+label 5: [('amazing', 709), ('just', 321), ('video', 314)]
+label 6: [('review', 1391), ('trynono', 853), ('ohreally', 712)]
+label 7: [('dirk', 563), ('noringski', 552), ('gump', 540)]
+label 8: [('bevacqua', 358), ('jonas', 358), ('jay', 343)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+There is no need to merge.
+
+
+
+

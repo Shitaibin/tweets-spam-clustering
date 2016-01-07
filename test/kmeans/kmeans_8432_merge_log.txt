@@ -1,0 +1,136 @@
+k =  2
+Before merge
+tags of each cluster:
+label 0: [('13thingsilove', 1315), ('getonmynerves', 1257), ('abramson', 1223)]
+label 1: [('mitt', 2124), ('romney', 2124), ('believe', 982)]
+
+merge rules:
+0 -> 0
+1 -> 1
+There is no need to merge.
+k =  7
+Before merge
+tags of each cluster:
+label 0: [('ghettospellingbee', 840), ('13thingsilove', 226), ('mitt', 224)]
+label 1: [('hughes', 982), ('mark', 979), ('mitt', 226)]
+label 2: [('folks', 557), ('groveling', 557), ('place', 557)]
+label 3: [('jerry', 304), ('tom', 298), ('sex', 145)]
+label 4: [('getonmynerves', 1040), ('mitt', 942), ('romney', 942)]
+label 5: [('abramson', 1363), ('jill', 1363), ('mitt', 364)]
+label 6: [('believe', 979), ('won', 979), ('site', 529)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+There is no need to merge.
+k =  5
+Before merge
+tags of each cluster:
+label 0: [('hughes', 321), ('mark', 319), ('jerry', 298)]
+label 1: [('mitt', 1602), ('romney', 1602), ('nicola', 798)]
+label 2: [('abramson', 1538), ('jill', 1538), ('espn', 316)]
+label 3: [('getonmynerves', 967), ('13thingsilove', 955), ('ghettospellingbee', 674)]
+label 4: [('believe', 978), ('won', 978), ('site', 527)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+There is no need to merge.
+k =  9
+Before merge
+tags of each cluster:
+label 0: [('jerry', 505), ('tom', 494), ('mitt', 110)]
+label 1: [('believe', 978), ('won', 978), ('site', 527)]
+label 2: [('hughes', 825), ('mark', 822), ('mitt', 194)]
+label 3: [('abramson', 1166), ('jill', 1166), ('mitt', 317)]
+label 4: [('folks', 553), ('groveling', 553), ('place', 553)]
+label 5: [('amazing', 865), ('just', 647), ('video', 548)]
+label 6: [('sex', 117), ('factor', 109), ('fear', 109)]
+label 7: [('getonmynerves', 718), ('13thingsilove', 633), ('mitt', 619)]
+label 8: [('nicola', 747), ('roberts', 747), ('mitt', 167)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+8 -> 8
+There is no need to merge.
+k =  8
+Before merge
+tags of each cluster:
+label 0: [('video', 570), ('amazing', 546), ('surprised', 546)]
+label 1: [('getonmynerves', 894), ('13thingsilove', 817), ('ghettospellingbee', 590)]
+label 2: [('hughes', 928), ('mark', 926), ('mitt', 188)]
+label 3: [('thing', 454), ('believe', 453), ('bread', 453)]
+label 4: [('jerry', 530), ('tom', 520), ('mitt', 97)]
+label 5: [('nicola', 834), ('roberts', 834), ('mitt', 165)]
+label 6: [('abramson', 1343), ('jill', 1343), ('espn', 279)]
+label 7: [('mitt', 1180), ('romney', 1180), ('getonmynerves', 279)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+6 -> 6
+7 -> 7
+There is no need to merge.
+k =  6
+Before merge
+tags of each cluster:
+label 0: [('hughes', 987), ('mark', 985), ('mitt', 211)]
+label 1: [('getonmynerves', 903), ('13thingsilove', 881), ('amazing', 632)]
+label 2: [('abramson', 1340), ('jill', 1340), ('mitt', 289)]
+label 3: [('folks', 557), ('groveling', 557), ('place', 557)]
+label 4: [('believe', 977), ('won', 977), ('site', 527)]
+label 5: [('mitt', 1203), ('romney', 1203), ('jerry', 480)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 5
+There is no need to merge.
+k =  3
+Before merge
+tags of each cluster:
+label 0: [('believe', 982), ('won', 982), ('site', 532)]
+label 1: [('hughes', 469), ('mark', 467), ('jerry', 322)]
+label 2: [('mitt', 1786), ('romney', 1786), ('13thingsilove', 1639)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+There is no need to merge.
+k =  4
+Before merge
+tags of each cluster:
+label 0: [('getonmynerves', 1215), ('13thingsilove', 1138), ('mitt', 1127)]
+label 1: [('believe', 982), ('won', 982), ('site', 532)]
+label 2: [('hughes', 1059), ('mark', 1057), ('mitt', 238)]
+label 3: [('abramson', 1491), ('jill', 1491), ('nicola', 805)]
+
+merge rules:
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+There is no need to merge.
