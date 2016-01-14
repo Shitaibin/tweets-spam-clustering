@@ -2,7 +2,6 @@
 data/processed_20110607_spam_training.txt
 data/processed_20110607_spam_testing.txt
 data/processed_20110607_tweets_training.txt
-import_to_mysql/
 test/test_result/
 .swp
 
