@@ -8,8 +8,7 @@ from __future__ import print_function
 import sys
 sys.path.append("..")
 
-from tools.tools import load_data
-from tools.tools import remove_hashtag
+from tools.handledata import load_data
 
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -26,7 +25,6 @@ from optparse import OptionParser
 from time import time
 
 import numpy as np
-import pandas as pd
 from pandas import DataFrame
 
 import matplotlib.pyplot as plt
@@ -82,16 +80,16 @@ opts.n_components = 100  # For LSA, recommended value
 ###############################################################################
 # Load data
 
-# fpath = "../data/test_1000.txt"
-# dataset = load_data(fpath)
-# print ('dataset shape: %d,%d' % dataset.shape)
+fpath = "../../data/test_1000.txt"
+dataset = load_data(fpath)
+print('dataset shape: %d,%d' % dataset.shape)
 # Get tweets content
-# data = dataset[:, 3]
+data = dataset[:, 3]
 
-dataset = pd.read_csv("explor_data/data/test_8000.csv", sep="|")
-data = dataset['content']
-# remove hashtags
-data = remove_hashtag(data)
+# dataset = pd.read_csv("explor_data/data/test_8000.csv", sep="|")
+# data = dataset['content']
+# # remove hashtags
+# data = remove_hashtag(data)
 
 print("Extracting features from the training dataset"
       "using a sparse vectorizer")
@@ -360,9 +358,9 @@ if __name__ == '__main__':
     # should_iter() # YES
     n_iter = 10  # make sure more than 20
     range_k = range(2, 10)
-    ks, sses, silhouettes = validate(
-        n_iter=n_iter, range_k=range_k)  # fast and enough
-    # k_sse = validate() # slow but more accurate
-    plot_sse_and_silhouette(ks, sses, silhouettes)
-
-    save_test_result(n_samples, n_iter, ks, sses, silhouettes)
+    # ks, sses, silhouettes = validate(
+    #     n_iter=n_iter, range_k=range_k)  # fast and enough
+    # # k_sse = validate() # slow but more accurate
+    # plot_sse_and_silhouette(ks, sses, silhouettes)
+    #
+    # save_test_result(n_samples, n_iter, ks, sses, silhouettes)

@@ -40,7 +40,8 @@ def load_data(fname):
                 content_list.append(content)
                 url_list.append(url)
     except Exception as e:
-        f.close()
+        # TODO: if fname not valid, f is valid, so fix it
+        if f: f.close()
         logger.exception(e)
     ary = np.asarray([tid_list, timestamp_list,
                       degree_list, content_list, url_list])
