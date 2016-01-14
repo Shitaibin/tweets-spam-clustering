@@ -6,10 +6,10 @@ from __future__ import print_function
 
 # private tools
 import sys
-sys.path.append("../tools/")
+sys.path.append("..")
 
-from tools import load_data
-from tools import remove_hashtag
+from tools.tools import load_data
+from tools.tools import remove_hashtag
 
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
