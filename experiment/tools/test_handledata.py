@@ -29,8 +29,6 @@ class DataTestCase(unittest.TestCase):
                   "abcd  ojk"]
         self.assertEqual(result, remove_hashtag(tweets))
 
-    ##################################################
-    # Unittest for Visulize fucntions
     def test_split_record(self):
         """
         Unittest for function split_record.
