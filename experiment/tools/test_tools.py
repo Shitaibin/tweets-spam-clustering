@@ -8,6 +8,7 @@ class ToolsTestCase(TestCase):
     """
     Unittest for tools.py
     """
+
     def test_timestamp_to_datehour(self):
         """
         Unittest for function timestamp_to_datehour.
