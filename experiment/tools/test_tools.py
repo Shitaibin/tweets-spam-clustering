@@ -1,109 +1,17 @@
 import unittest
 from unittest import TestCase
-from tools import remove_hashtag, get_hashtag
-from tools import split_record, text_stem, tokenize
-from tools import cos_similarity
-from tools import merge_tweets, get_m_tags, sort_tag_counts
-from tools import get_cluster_tag, get_merge_rules
-from tools import timestamp_to_datehour
-from nltk.stem.porter import PorterStemmer
+
 from pandas import DataFrame
+
+from tools import get_cluster_tag, get_merge_rules
+from tools import merge_tweets, get_m_tags, sort_tag_counts
+from tools import timestamp_to_datehour
 
 
 class ToolsTestCase(TestCase):
-
     """
     Unittest for tools.py
     """
-    ##################################################
-    # Unittest for preprocessing data
-
-    def test_get_hashtag(self):
-        """
-        Unittest for function get_hashtag hashtag.
-        """
-        self.assertEqual("#ohi", get_hashtag("abcd #ohi"))
-        self.assertEqual("", get_hashtag("abcd ohi ojk"))
-
-    def test_remove_hashtag(self):
-        """
-        Unittest for function remove hashtag.
-        """
-        tweets = ["abcd #ohi",
-                  "abcd #ohi ojk"]
-        result = ["abcd ",
-                  "abcd  ojk"]
-        self.assertEqual(result, remove_hashtag(tweets))
-
-    ##################################################
-    # Unittest for Visulize fucntions
-    def test_split_record(self):
-        """
-        Unittest for function split_record.
-        """
-        # test data
-        sid = '123456'
-        stamp = '151413'
-        degree = '1'
-        content = "this's the content.#hashtag"
-        url = "http://jkfslkdf.ckd"
-        tweet = sid + ' | ' + stamp + ' | ' +\
-            degree + ' | ' + content +\
-            ' |*|' + url
-        tweet_tuple = (sid, stamp, degree, content, url)
-        # test result
-        ret = split_record(tweet)
-        # data and result should be equal
-        self.assertEqual(tweet_tuple, ret, msg="Split result should be \
-                         {}, rather than{}".format(tweet_tuple, ret))
-
-    def test_test_stem(self):
-        """
-        Unittest for function test_stem.
-        """
-        # test data
-        s = "Python is very interesting"
-        l = s.split()
-        stem_result = ['Python', 'is', 'veri', 'interest']
-        # f_result
-        stemmer = PorterStemmer()
-        f_result = text_stem(l, stemmer)
-        # stem_result == f_result ?
-        self.assertEqual(stem_result, f_result, msg="\nThe stem result\
-                          should be \n{},\n rather than \n{}".format(
-            stem_result, f_result))
-
-    def test_tokenize(self):
-        """
-        Unittest for function tokenize.
-        """
-        # test data
-        s = "Python is very interesting."  # end with a period
-        result = ['Python', 'is', 'veri', 'interest']
-        # tokenize_result
-        tokenize_result = tokenize(s)
-        # tokenize_result == result ?
-        self.assertEqual(result, tokenize_result, msg="\nThe stem result\
-                          should be \n{},\n rather than \n{}".format(
-            result, tokenize_result))
-
-    def test_cos_similarity(self):
-        """
-        Unittest for function CosSimilirity.
-
-        The input parameters is normalize vector/list. So, cos_similarity
-        just caculate the dot product. In this test, we just need
-        to test dot product is enough.
-        """
-        self.assertEqual(8, cos_similarity([1, 2], [2, 3]), msg="The cosine\
-                          similarity of (1,2) and (2,3) should be \
-                         {}".format(8))
-        self.assertEqual(0, cos_similarity([0, 0], [2, 3]), msg="The cosine\
-                          similarity of (0,0) and (2,3) should be \
-                         {}".format(0))
-        self.assertEqual(4, cos_similarity([-1, 2], [2, 3]), msg="The cosine\
-                          similarity of (-1,2) and (2,3) should be \
-                         {}".format(4))
 
     def test_merge_tweets(self):
         """
@@ -221,6 +129,7 @@ class ToolsTestCase(TestCase):
         """
         timestamp = '1307000691'
         self.assertEqual("2011060215", timestamp_to_datehour(timestamp))
+
 
 if __name__ == "__main__":
     unittest.main()

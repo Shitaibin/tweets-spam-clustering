@@ -8,77 +8,22 @@
 
 """
 
+# TODO: decompose the left compose
+
 from __future__ import print_function
 
-from pytagcloud import create_tag_image, make_tags
-from pytagcloud.lang.counter import get_tag_counts
-
-import pandas as pd
-from pandas import DataFrame
 import logging
 import time
 
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk import word_tokenize
-from nltk.stem.porter import PorterStemmer
-import string
-
-from scipy import dot, mat
+import pandas as pd
+from pandas import DataFrame
+from pytagcloud import create_tag_image, make_tags
+from pytagcloud.lang.counter import get_tag_counts
 
 # Display progress logs on stdout
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(message)s')
 logger = logging.getLogger('tweetspamtools')
-
-
-
-
-
-#################################################
-# Tfidf transform
-
-
-def text_stem(text, stemmer):
-    return [stemmer.stem(term) for term in text]
-
-
-def tokenize(text):
-    tokenized = word_tokenize(text)
-    # removing punctation
-    tokenized = [word for word in tokenized if word not in string.punctuation]
-    stemmer = PorterStemmer()
-    return text_stem(tokenized, stemmer)
-
-
-def stem_tfidf_transform(documents):
-    vectorizer = TfidfVectorizer(tokenizer=tokenize, stop_words='english')
-    transformed = vectorizer.fit_transform(documents)
-    try:
-        doc_vect = transformed.toarray()
-        return doc_vect
-    except Exception as e:
-        logger.exception(e)
-
-
-#################################################
-# Cosin similarity
-def cos_similarity(vecx, vecy):
-    """
-    Using for cacluate cosin similarity of document vectors.
-
-    document vector comes from tfidf. They, defaulty, are
-    NORMAL. So, there size is 1.
-    """
-    # if vecx is list, no need transform to matrix
-    # if type(vecx) == type([]):
-    if isinstance(vecx, list):
-        return float(dot(vecx, vecy))
-    # if other type, we transform to matrix
-    a = mat(vecx)
-    b = mat(vecy)
-    c = float(dot(a, b.T))
-    return c
 
 
 #################################################
