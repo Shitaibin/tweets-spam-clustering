@@ -4,9 +4,10 @@
 from __future__ import print_function
 
 import sys
-sys.path.append("../tools")
 
-from tools import merge_cluster_result, analyze_result
+sys.path.append("..")
+
+from tools.merge_cluster import merge_cluster_result, analyze_result
 
 import os
 
